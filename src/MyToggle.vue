@@ -1,7 +1,7 @@
 <template>
     <label>
         <span>Toggle this:</span>
-        <input type="checkbox" @input="dothing" :checked="value" />
+        <input type="checkbox" @input="handleInput" :checked="value" />
     </label>
 </template>
 
@@ -13,9 +13,10 @@
     export default class MyToggle extends Vue {
         @Prop({required: true}) value!: boolean
 
-        dothing (ev) {
-            console.log("Input: I am emitting an event to say I have been toggled to", ev.target.checked)
-            this.$emit('input', ev.target.checked)
+        handleInput (ev: Event) {
+            const target = (ev.target as HTMLInputElement)
+            console.log("Input: I am emitting an event to say I have been toggled to", target.checked)
+            this.$emit('input', target.checked)
         }
     }
 </script>
