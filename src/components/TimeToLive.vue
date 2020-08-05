@@ -1,6 +1,8 @@
 <template>
     <div>
-        <p v-translate="{countdown}">You have %{countdown} seconds to live</p>
+        <p v-translate="{countdown}" translate-comment="PUBLIC-DRIVE">
+            You have %{countdown} seconds to live
+        </p>
 
         <fieldset>
             <legend>Language</legend>

@@ -16,15 +16,15 @@
 
         <p v-if="showToast">UPDATED TO {{ valueOfMyToggle.toString().toUpperCase() }}</p>
 
-        <TimeToLive />
+        <TimeToLive/>
     </div>
 </template>
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
     import HelloWorld from './components/HelloWorld.vue';
-    import MyToggle from "@/MyToggle.vue";
-    import TimeToLive from "@/TimeToLive.vue";
+    import MyToggle from "./components/MyToggle.vue";
+    import TimeToLive from "./components/TimeToLive.vue";
 
     @Component({
         components: {TimeToLive, MyToggle, HelloWorld},
