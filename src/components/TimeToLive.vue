@@ -1,8 +1,15 @@
 <template>
     <div>
-        <p v-translate="{countdown}" translate-comment="PUBLIC-DRIVE">
-            You have %{countdown} seconds to live
+        <p v-translate="{countdown, advertiser}" translate-comment="PUBLIC-DRIVE">
+            You have %{countdown} seconds to live because %{advertiser} says so!
         </p>
+
+        <fieldset>
+            <legend>Advertiser</legend>
+            <select name="language" v-model="advertiser">
+                <<option v-for="advertiser in advertisers" :value="advertiser">{{ advertiser }}</option>>
+            </select>
+        </fieldset>
 
         <fieldset>
             <legend>Language</legend>
@@ -20,6 +27,12 @@
     @Component
     export default class TimeToLive extends Vue {
         countdown: number = 10;
+        advertisers: Array<string> = [
+            "Badger Team",
+            "Bodger Team",
+            "MASHED POTATO"
+        ]
+        advertiser: string = this.advertisers[Math.floor(Math.random() * this.advertisers.length)]
 
         mounted() {
             setInterval(() => {

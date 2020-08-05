@@ -11,10 +11,10 @@ Vue.use(GetTextPlugin, {
   },
     translations: {
         en_US: {
-            "You have %{countdown} seconds to live": "You have %{countdown} seconds to live"
+            "You have %{countdown} seconds to live because %{advertiser} says so!": "You have %{countdown} seconds to live because %{advertiser} says so!"
         },
         en_ROB: {
-            "You have %{countdown} seconds to live": "Hurdy gurdy flibberty gibbet %{countdown} badger!"
+            "You have %{countdown} seconds to live because %{advertiser} says so!": "Hurdy gurdy %{advertiser} flibberty gibbet %{countdown}!"
         }
     }
 });
