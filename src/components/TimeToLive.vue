@@ -22,7 +22,6 @@
         countdown: number = 10;
 
         mounted() {
-            console.log("App created");
             setInterval(() => {
                 this.countdown -= 1;
                 if (this.countdown === 0) this.countdown = 10;
