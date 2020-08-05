@@ -7,7 +7,7 @@
         <fieldset>
             <legend>Advertiser</legend>
             <select name="language" v-model="advertiser">
-                <<option v-for="advertiser in advertisers" :value="advertiser">{{ advertiser }}</option>>
+                <option v-for="advertiser in advertisers" :value="advertiser">{{ advertiser }}</option>
             </select>
         </fieldset>
 
